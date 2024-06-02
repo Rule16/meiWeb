@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "element-plus": "^2.7.4",
     "vue": "^3.4.21"
   },
   "devDependencies": {

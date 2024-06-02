@@ -1,483 +1,320 @@
 <template>
-    <!--new header start-->
-    <!-- 头部区域开始 -->
-    <div class="header">
-        <!-- 内容主体区域 -->
-        <div class="container">
-            <!-- 上模块 -->
-            <div class="top">
-                <!-- 左模块 -->
-                <div class="left">
-                    <img src="./resource/img/logo.png" alt=""/>
-
-                </div>
-                <!-- 右模块 -->
-                <div class="right clearfix">
-                    <div class="search">
-                        <input type="text" placeholder="请输入关键字" id="keyword"/>
-                        <button onclick="search()">
-                            <img src="./resource/img/search.png" alt=""/>
-                        </button>
-                    </div>
-
-
-
-
-
-
-                    <div class="searchWord">
-                        <ul class="clearfix">
-                            <li>热搜词：</li>
-                            <li  onclick="search_word('褐煤')">褐煤</li>
-                            <li  onclick="search_word('竞价')">竞价</li>
-                            <li  onclick="search_word('无烟煤')">无烟煤</li>
-                        </ul>
+    <div class="main">
+        <div class="top w-full flex justify-center">
+            <div class="content">
+                <div class="top-content">
+                    <img src="./resource/img/logo.png"/>
+                    <div class="flex">
+                        <div class="company-info">
+                            <div class="company-name">安徽电力股份有限公司淮南田家庵发电分公司</div>
+                            <div class="member">未缴费中长期会员</div>
+                        </div>
+                        <div class="log-out">退出</div>
                     </div>
                 </div>
-            </div>
-            <!-- 下模块 -->
-            <div class="bottom">
-                <ul class="clearfix" id="topTab">
-                    <li id="page-1" data-type="1" class="currentLi"><a href="javascript:;">首页</a><span class="nav_line"></span></li>
-
-                    <li id="page-2" data-type="2"><a href="javascript:;">中长期合同</a><span class="nav_line"></span></li>
-
-
-                    <li id="page-3" data-type="3"><a href="javascript:;" >现货交易</a><span class="nav_line"></span></li>
-
-                    <li id="page-4" data-type="4"><a href="javascript:;">物流中心</a><span class="nav_line"></span></li>
-
-
-                    <li id="page-5" data-type="5"><a href="javascript:;">质检中心</a><span class="nav_line"></span></li>
-
-                    <li id="page-9" data-type="9"><a href="javascript:;">煤储管理</a><span class="nav_line"></span></li>
-
-                    <li id="page-6" data-type="6"><a href="javascript:;">金融服务超市</a></li>
-
-                </ul>
+                <div class="top-menu">
+                    <div
+                            class="menu-item"
+                            :class="{'active-menu-item': idx == activeMenu}"
+                            v-for="(item, idx) in menuList"
+                            :key="idx"
+                            @click="checkMenu(idx)"
+                    >
+                        {{item}}
+                        <div class="menu-line" :style="{visibility: idx == activeMenu ? 'visible' : 'hidden'}"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
-    </div>
-    <!-- 头部区域结束 -->
-
-
-    
-    <div class="platform">
-        <header>
-            <div class="menu">
-                <a href="#">首页</a>
-                <a href="#">会员中心</a>
-                <a href="#">2024年电煤中长期合同</a>
-                <a href="#">2024年非电煤长期合同</a>
-                <a href="#">2023年电煤中长期合同</a>
-                <a href="#">2023年非电煤中长期合同</a>
-                <a href="#">95306直通车</a>
-                <a href="#">交收单</a>
-                <a href="#">资金结算</a>
-                <a href="#"></a>
-            </div>
-            <div class="login">
-                <button @click="login">登录</button>
-            </div>
-        </header>
-
-        <main>
-            <aside>
-                <ul>
-                    <li>服务指引</li>
-                    <li>待确认企业履约信息</li>
-                    <li>已确认企业履约状态</li>
-                    <li>中长期合同管理</li>
-                    <li>中长期合同月度审核</li>
-                    <li>中长期合同月度审核</li>
-                    <li>中长期合同月度回款</li>
-                    <li>月度调度合同回款</li>
-                    <li>悬浮提示公示</li>
-                </ul>
-            </aside>
-
-            <section>
-                <h2>待确认企业履约信息</h2>
-                <div class="search-filters">
-                    <label>
-                        <input type="radio" name="enterpriseType" value="public"> 公示型企业
-                    </label>
-                    <label>
-                        <input type="radio" name="enterpriseType" value="traditional"> 传统煤炭企业
-                    </label>
-                    <label>
-                        <input type="radio" name="enterpriseType" value="publicCoal"> 公示型企业与传统煤炭
-                    </label>
-                    <button @click="search">查询</button>
+        <div class="flex w-full justify-center main-content">
+            <div class="sign-info">
+                <div class="left-menu">
+                    <div
+                            class="left-menu-item"
+                            v-for="(item, idx) in leftMenuList"
+                            :key="idx"
+                            :class="{'left-menu-item-active': idx == activeLeftMenu}"
+                            @click="checkLeftMenu(idx)"
+                    >{{item}}
+                    </div>
                 </div>
-                <table>
-                    <thead>
-                    <tr>
-                        <th>操作</th>
-                        <th>公示型企业</th>
-                        <th>签订企业名称</th>
-                        <th>煤种</th>
-                        <th>签订数量（万吨）</th>
-                        <th>平仓结算数量（万吨）</th>
-                        <th>操作</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>
-                            <button @click="viewDetails">详情</button>
-                        </td>
-                        <td>安徽地方政府物资供应链有限公司</td>
-                        <td>安徽地方政府物资供应链有限公司</td>
-                        <td>褐煤</td>
-                        <td>300</td>
-                        <td>115</td>
-                        <td>
-                            <button @click="confirm">确认</button>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
+                <div class="right-info">
+                    <div class="right-top">
+                        <div class="right-check-menu">我的工作台 / {{leftMenuList[activeLeftMenu]}}</div>
+                        <div class="right-top-time">开市时间：00:00 - 24:00</div>
+                    </div>
+                    <div class="right-content">
+                        <div class="company-tabs">
+                            <div class="tabs-item"
+                                 v-for="(item, idx) in companyTabs"
+                                 :key="idx"
+                                 :class="{'active-tab': idx == activeTab}"
+                                 @click="checkTab(idx)"
+                            >{{item}}
+                            </div>
+                        </div>
+                        <div class="table-info">
+                            <div class="table-form flex justify-between">
+                                <div>
+                                    <el-input v-model="keyword1" class="table-input"></el-input>
+                                    <el-input v-model="keyword2" class="table-input"></el-input>
+                                    <el-input v-model="keyword3" class="table-input"></el-input>
+                                </div>
+                                <div>
+                                    <el-button style="padding: 10px 40px;" color="#626aef" round>查询</el-button>
+                                    <el-button type="text" style="color: #6478D3">重置</el-button>
+                                </div>
+                            </div>
+                            <el-table class="table-data" :data="tableData">
+                                <el-table-column align="center" label="操作" width="100">
+                                    <template #default>
+                                        <el-button class="secure-about" color="#6478D3" round plain>解除关联</el-button>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column align="center" prop="companyName" label="公示用煤企业" width="310"></el-table-column>
+                                <el-table-column align="center" prop="aboutCompanyName" label="关联企业名称" width="310"></el-table-column>
+                                <el-table-column align="center" prop="status" label="审核状态" width="100"></el-table-column>
+                                <el-table-column align="center" prop="number" label="需求量（万吨）" width="130"></el-table-column>
+                                <el-table-column align="center" prop="auditNumber" label="平台核验通过量（万吨）" width="180"></el-table-column>
+                            </el-table>
+                            <div class="flex justify-between" style="margin-top: 15px">
+                                <el-button class="secure-about" color="#6478D3" round plain>新增关联</el-button>
+                                <div style="color: #999999">显示第 1 到第 0 条记录，总共 0 条记录 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
-
 <script>
     export default {
         name: 'CoalTradingPlatform',
-        methods: {
-            login() {
-                alert('Login clicked');
-            },
-            search() {
-                alert('Search clicked');
-            },
-            viewDetails() {
-                alert('View Details clicked');
-            },
-            confirm() {
-                alert('Confirm clicked');
+        data() {
+            return {
+                menuList: [
+                    "首页", "会员中心", "2024年电煤中长期合同", "2024年非电煤中长期合同", "2023年电煤中长期合同", "2023年非电煤中长期合同", "95306直通车", "交收单", "奖金结算",
+                ],
+                activeMenu: 2,
+                leftMenuList: [
+                    "服务指引", "供需企业信息公示", "关联公示签约信息", "已关联公示信息授权", "中长期合同录入", "中长期合同确认", "中长期合同查询", "中长期合同签订", "月度履约数据报送", "履约情况公示"
+                ],
+                activeLeftMenu: 2,
+                companyTabs: ['煤炭企业', '用煤企业'],
+                activeTab: 1,
+                tableData: [
+                    {
+                        companyName: '安徽电力股份有限公司淮南田家庵发电分公司',
+                        aboutCompanyName: '安徽电力股份有限公司淮南田家庵发电分公司',
+                        status: '审核通过',
+                        number: '300',
+                        auditNumber: '115',
+                    }
+                ],
+                keyword1: '公示用煤企业',
+                keyword2: '审核状态(全部)',
+                keyword3: '公示用煤企业营业执照名称',
             }
+        },
+        methods: {
+            checkMenu(idx) {
+                this.activeMenu = idx
+            },
+            checkLeftMenu(idx) {
+                this.activeLeftMenu = idx
+            },
+            checkTab(idx) {
+                this.activeTab = idx
+            },
         }
     }
 </script>
 
 <style scoped>
-    .platform {
-        font-family: Arial, sans-serif;
+    .main {
+        width: 100%;
+        height: 100vh;
+        background: url("./resource/img/main_bg.png") no-repeat fixed;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
     }
 
-    header {
+    .top {
+        box-shadow: 1px 1px 20px 0px #E7E5E5;
+    }
+
+    .company-info {
+        margin-right: 25px;
+    }
+
+    .member {
+        margin-top: 5px;
+    }
+
+    .log-out {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 10px 40px;
+        color: #F08D1D;
+        height: fit-content;
+        cursor: pointer;
+    }
+
+    .content {
+        width: 65%;
+    }
+
+    .main-content {
+        flex: 1;
+        margin: 30px 0;
+    }
+
+    .top-content {
         display: flex;
         justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .top-menu {
+        display: flex;
         align-items: center;
-        background: #f0f0f0;
-        padding: 10px 20px;
     }
 
-    .menu a {
-        margin-right: 20px;
-        text-decoration: none;
-        color: #333;
+    .menu-item {
+        margin-right: 25px;
+        cursor: pointer;
+        font-family: MicrosoftYaHei-Bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .login button {
-        padding: 5px 10px;
+    .menu-item:hover .menu-line {
+        visibility: visible !important;
     }
 
-    main {
+    .menu-line {
+        height: 2px;
+        background: #FF8A48;
+        width: 50%;
+        margin-top: 5px;
+        visibility: hidden;
+    }
+
+    .active-menu-item {
+        font-weight: bold;
+    }
+
+    .sign-info {
+        width: 65%;
         display: flex;
     }
 
-    aside {
-        width: 200px;
-        background: #f8f8f8;
-        padding: 20px;
-    }
-
-    aside ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    aside li {
-        margin-bottom: 10px;
-    }
-
-    section {
-        flex: 1;
-        padding: 20px;
-    }
-
-    .search-filters {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .search-filters label {
+    .left-menu {
+        width: 190px;
+        background: rgba(122, 174, 242, 0.6);
         margin-right: 10px;
     }
 
-    table {
+    .right-info {
+        width: calc(100% - 190px - 30px);
+    }
+
+    .right-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #6478D3;
+        padding-left: 25px;
+    }
+
+    .right-top-time {
+        border: 1px solid #6478D3;
+        border-radius: 14px;
+        padding: 5px 20px;
+    }
+
+    .left-menu-item {
+        padding: 15px;
+        padding-left: 30px;
+        cursor: pointer;
+    }
+
+    .left-menu-item-active {
+        background-color: #6478D3;
+        border-left: 4px solid #F08D1D;
+        color: #ffffff;
+    }
+
+    .right-content {
+        border: 1px solid #efefef;
+        margin-top: 30px;
+        height: calc(100% - 33px - 30px)
+    }
+
+    .company-tabs {
+        display: flex;
         width: 100%;
-        border-collapse: collapse;
+        background: #fbfbfb;
+        border-bottom: 1px solid #efefef;
     }
 
-    thead {
-        background: #e8e8e8;
+    .tabs-item {
+        padding: 7px 15px;
+        cursor: pointer;
     }
 
-    th, td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: left;
+    .active-tab {
+        background: #6478D3;
+        color: #ffffff;
     }
 
-    button {
-        padding: 5px 10px;
+    .table-info {
+        padding: 0 25px;
+        padding-top: 60px;
     }
 
-    body {
-        height: 100%;
-    }
 
-    .container {
-        width: 1200px;
-        margin: auto;
-    }
-
-    /*right*/
-    .contact-container {
-        position: fixed;
-        top: 45%;
-        right: 0;
-        bottom: 50%;
-        z-index: 99;
-        width: 94px;
-        height: 320px;
-        box-sizing: border-box;
-
-    }
-    .contact-container > ul {
-        box-sizing: border-box;
+    .table-data {
         width: 100%;
-        height: 100%;
-        background: #265EC7;
-        padding: 0 11px;
-    }
-    .contact-container > ul a{
-        width: 100%;
-        display: inline-block;
-        text-align: center;
-    }
-    .contact-container > ul li h6{font-size: 12px;font-weight: normal;text-align: center;color: #FFFFFF}
-    .contact-container > ul >li{
-        height: 80px;
-        /*padding: 26px 20px 20px 18px;*/
-        padding: 15px 0px 15px 0px;
-        border-bottom: 1px solid;
-        border-color: rgba(236,237,239,0.42);
-    }
-    .contact-container > ul > li img {
-        width: 34px;
-        height: 34px;
-    }
-    .contact-container > ul > .gateway img,.contact-container > ul > .email img{width:40px}
-    .contact-container > ul > .gateway a{
-        padding-left: 2px;
+        margin-top: 20px;
+        box-shadow: -1px 0px 10px 0px #c3c1c1;
     }
 
-    /*头部*/
-    .header {
-        height: 158px;
+    .secure-about {
 
     }
 
-    .header .top .left {
-        display: inline-block;
-        width: 271px;
-        height: 48px;
-        margin-top: 31px;
-        /*margin-left: 30px;*/
-    }
-
-    .header .top .left img {
-        width: 100%;
-        height: auto;
-    }
-
-    .header .top .right {
-        float: right;
-        /*width: 518px;*/
-        margin-top: 29px;
-    }
-
-    .header .top .right .search {
-        position: relative;
-        width: 301px;
-        height: 42px;
-        overflow: hidden;
-        /*box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.10);*/
-        background: #EEEFEF;
-        border-radius: 30px;
-    }
-
-    .header .top .right .search input {
-        padding: 12px 0 12px 18px;
-        width: 100%;
-        height: 100%;
-        border: 0;
-
-        opacity: 0.6;
-        font-family: MicrosoftYaHei;
-        font-size: 12px;
-        color: #222222;
-        letter-spacing: 0;
-        line-height: 18px;
-        font-weight: 400;
-        background: #FFFFFF;
-        border-radius: 30px;
-        border: 1px solid #6BA2FF;
-    }
-    .header .top .right .search input:focus,.header .top .right .search input:hover{
-        border: 1px solid #1B4CD9;
-    }
-
-    .header .top .right .search button {
-        position: absolute;
-        right: 0;
-        top: 0;
-        display: inline-block;
-        width: 48px;
-        height: 42px;
-        border: 0;
-        background: #6BA2FF;
-    }
-
-    .header .top .right .search button img {
-        width: 15px;
-        height: 15px;
-        margin: auto;
-    }
-
-    .header .top .right .searchWord {
-        width: 220px;
-        margin: 8px 0 0 18px;
-    }
-
-    .header .top .right .searchWord li {
-        float: left;
-        margin-right: 8px;
-        font-family: PingFangSC-Regular;
-        font-size: 12px;
-        color: #265EC7;
-        letter-spacing: 0;
-        line-height: 18px;
-        font-weight: 400;
-    }
-
-    .header .bottom li {
-        font-family: MicrosoftYaHei;
-        height: 38px;
-        float: left;
-        position: relative;
-        margin-right: 102px;
-    }
-    .header .bottom li:last-child{
-        margin-right: 0px;
+    .table-input {
+        width: 200px;
+        margin-right: 20px;
 
     }
-    .header .bottom{
-        margin: 37px 0 14px 0;
-    }
-    .header .bottom li a {
-        display: block;
-        height: 28px;
-        /*line-height: 24px;*/
-        font-family: MicrosoftYaHei;
-        font-size: 20px;
-        color: #666666;
-        letter-spacing: 0;
-        text-align: center;
-        font-weight: 400;
-    }
-    .header .bottom li.nav_line{
-        width: 1px;
-        height: 18px;
-        background: #979797;
-        opacity: 0.34;
-        margin: 5px 51px 0;
-    }
-    .header .bottom .currentLi::after{
-        content: '';
-        display: inline-block;
-        width: 40px;
-        height: 4px;
-        background: #FE7904;
-        border-radius: 1.5px;
-        position: absolute;
-        top: 30px;
-        left: 50%;
-        margin-left: -20px;
+
+    /deep/ .table-input .el-input__wrapper {
+        border-radius: 15px;
     }
 
-    .header .bottom .currentLi a {
-        font-family: PingFangSC-Semibold;
-        font-size: 20px;
-        color: #222222;
-        letter-spacing: 0;
-        text-align: center;
-        font-weight: 600;
-    }
-    .header .bottom .nav_line{
-        display: inline-block;
-        width: 1px;
-        height: 18px;
-        background: #979797;
-        opacity: 0.34;
-        position: absolute;
-        top: 5px;
-
-    }
-    .header .bottom #page-1 .nav_line{
-        left: 91px;
-    }
-    .header .bottom #page-2 .nav_line{
-        left: 151px;
-    }
-    .header .bottom #page-3 .nav_line,.header .bottom #page-4 .nav_line,.header .bottom #page-5 .nav_line,
-    .header .bottom #page-7 .nav_line,.header .bottom #page-9 .nav_line{
-        left: 131px;
-    }
-    /*工作台样式*/
-    .header  .gzt{
-        width: 121px;
-        height: 35px;
-        background-color: #FD8E1B;
-        border-radius: 20px;
-        position: relative;
-        float: left;
-        margin-left: 35px;
-    }
-    .header  .gzt .cl img{
-        width: 33px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+    /deep/ .el-table th.el-table__cell {
+        background: #6478D3;
+        color: #ffffff;
+        padding: 15px 0;
     }
 
+    /deep/ .el-table__body-wrapper .el-scrollbar__bar {
+        display: block !important;
+    }
 
-    .header  .gzt .cl .clname{
-        position: absolute;
-        top: 50%;
-        right: 13px;
-        font-size: 13px;
-        color: #FFFF;
-        color: rgba(255,255,255,1);
-        transform: translateY(-50%);
+    /deep/ .el-scrollbar__thumb {
+        background: #6478D3;
+        opacity: 1;
+    }
+
+    /deep/ .el-table--enable-row-transition .el-table__body td.el-table__cell {
+        padding: 15px 0;
     }
 
 </style>

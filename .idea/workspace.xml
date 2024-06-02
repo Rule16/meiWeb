@@ -11,9 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0cf38f-74ff-4006-bd37-0c34e1fd9484" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resouce/img/log.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resouce/test.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1717122789564</updated>
       <workItem from="1717122791403" duration="28000" />
-      <workItem from="1717122838766" duration="7161000" />
+      <workItem from="1717122838766" duration="24660000" />
     </task>
     <servers />
   </component>
@@ -93,5 +94,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="655" y="202" key="#dev/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1717126568525" />
+    <state x="662" y="223" width="596" height="594" key="find.popup" timestamp="1717302589057">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="662" y="223" width="596" height="594" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1717302589057" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1717317137773">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1717317137773" />
   </component>
 </project>
