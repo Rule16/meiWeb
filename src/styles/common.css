@@ -1,0 +1,61 @@
+.company-tabs {
+    display: flex;
+    width: 100%;
+    background: #fbfbfb;
+    border-bottom: 1px solid #efefef;
+}
+
+.tabs-item {
+    padding: 7px 15px;
+    cursor: pointer;
+}
+
+.active-tab {
+    background: #6478D3;
+    color: #ffffff;
+}
+
+.table-info {
+    padding: 0 25px;
+    padding-top: 60px;
+}
+
+
+.table-data {
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: -1px 0px 10px 0px #c3c1c1;
+}
+
+.secure-about {
+
+}
+
+.table-input {
+    width: 200px !important;
+    margin-right: 20px !important;
+    margin-top: 20px;
+}
+
+.table-input .el-input__wrapper {
+    border-radius: 15px !important;;
+}
+
+.el-table th.el-table__cell {
+    background: #6478D3 !important;;
+    color: #ffffff !important;;
+    padding: 15px 0 !important;;
+}
+
+.el-table__body-wrapper .el-scrollbar__bar {
+    display: block !important;
+}
+
+.el-scrollbar__thumb {
+    background: #6478D3 !important;;
+    opacity: 1 !important;;
+}
+
+.el-table--enable-row-transition .el-table__body td.el-table__cell {
+    padding: 15px 0 !important;;
+}

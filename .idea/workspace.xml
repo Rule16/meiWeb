@@ -11,10 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0cf38f-74ff-4006-bd37-0c34e1fd9484" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/heTongChaXun.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/qianYueXinXi.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/xinXiGongShi.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/common.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,8 @@
       <option name="presentableId" value="Default" />
       <updated>1717122789564</updated>
       <workItem from="1717122791403" duration="28000" />
-      <workItem from="1717122838766" duration="24660000" />
+      <workItem from="1717122838766" duration="28997000" />
+      <workItem from="1717419435868" duration="5369000" />
     </task>
     <servers />
   </component>
@@ -80,6 +83,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1717126659892">

@@ -5,7 +5,9 @@
 </template>
 
 <script lang="tsx" setup>
+import './styles/common.css'
 import Domain  from './domain.vue'
+
 
 </script>
 
