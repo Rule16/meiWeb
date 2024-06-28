@@ -6,8 +6,8 @@
                     <img src="./resource/img/logo.png"/>
                     <div class="flex">
                         <div class="company-info">
-                            <div class="company-name">安徽电力股份有限公司淮南田家庵发电分公司</div>
-                            <div class="member">未缴费中长期会员</div>
+                            <div class="company-name">国家能源集团宝庆发电有限公司</div>
+                            <div class="member">&emsp;中长期公员&emsp;<span class="expire-time">截至2024年12月31日</span></div>
                         </div>
                         <div class="log-out">退出</div>
                     </div>
@@ -109,8 +109,17 @@
         margin-right: 25px;
     }
 
+    .company-name {
+        font-size: 16px;
+    }
+
     .member {
         margin-top: 5px;
+        font-size: 12px;
+    }
+
+    .expire-time {
+        color: #9b9696;
     }
 
     .log-out {

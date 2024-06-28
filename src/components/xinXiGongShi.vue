@@ -47,27 +47,27 @@
             <div class="info-content">
                 <div class="info-title">企业公示</div>
                 <div class="info-container">
-                    <div class="info-item">公示用煤名称：华电莱州发电有限公司</div>
-                    <div class="info-item">企业名称：华电莱州发电有限公司</div>
-                    <div class="info-item">关联企业名称：华电莱州发电有限公司</div>
+                    <div class="info-item">公示用煤名称：<b>国家能源集团宝庆发电有限公司</b></div>
+                    <div class="info-item">企业名称：<b>国家能源集团宝庆发电有限公司</b></div>
+                    <div class="info-item">关联企业名称：<b>国家能源集团宝庆发电有限公司</b></div>
                     <div class="flex" style="margin: 30px 0">
-                        <div style="width: 400px">所属省：山东</div>
-                        <div>所属市：莱州</div>
+                        <div style="width: 400px">所属省：湖南省</div>
+                        <div>所属市：邵阳市</div>
                     </div>
                     <div class="flex" style="margin: 30px 0">
-                        <div style="width: 400px">联系人：孔凡平</div>
-                        <div>联系电话：</div>
+                        <div style="width: 400px">联系人：何云</div>
+                        <div>联系电话：13077100653</div>
                     </div>
+                    <div class="info-item">需求量：500&emsp;万吨</div>
                 </div>
                 <div class="info-title" style="margin-top: 20px">签约信息</div>
                 <div class="info-container">
                     <div class="flex" style="margin: 30px 0">
-                        <div style="width: 400px">平台核验通过量：215&emsp;万吨</div>
-                        <div>需求量：575&emsp;万吨</div>
+                        <div style="width: 400px">确认量：320&emsp;万吨</div>
+                        <div>平台核验通过量：320&emsp;万吨</div>
                     </div>
                     <div class="flex" style="margin: 30px 0">
-                        <div style="width: 400px">确认量：215&emsp;万吨</div>
-                        <div>纳入电煤台账量：215&emsp;万吨</div>
+                        <div>纳入电煤台账量：0&emsp;万吨</div>
                     </div>
                 </div>
                 <div class="flex justify-center" style="margin-top: 40px">
