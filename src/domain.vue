@@ -6,7 +6,7 @@
                     <img src="./resource/img/logo.png"/>
                     <div class="flex">
                         <div class="company-info">
-                            <div class="company-name">国家能源集团宝庆发电有限公司</div>
+                            <div class="company-name">四川华电珙县发电有限公司</div>
                             <div class="member">&emsp;中长期公员&emsp;<span class="expire-time">截至2024年12月31日</span></div>
                         </div>
                         <div class="log-out">退出</div>
