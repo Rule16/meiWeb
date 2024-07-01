@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0cf38f-74ff-4006-bd37-0c34e1fd9484" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/xinXiGongShi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/xinXiGongShi.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +64,7 @@
       <workItem from="1717122838766" duration="28997000" />
       <workItem from="1717419435868" duration="5369000" />
       <workItem from="1719537073254" duration="2210000" />
-      <workItem from="1719792305376" duration="280000" />
+      <workItem from="1719792305376" duration="894000" />
     </task>
     <servers />
   </component>
