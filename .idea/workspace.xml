@@ -11,6 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0cf38f-74ff-4006-bd37-0c34e1fd9484" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/components/heTongChaXun.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/heTongChaXun.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/xinXiGongShi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/xinXiGongShi.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/domain.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/domain.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +66,8 @@
       <workItem from="1717122838766" duration="28997000" />
       <workItem from="1717419435868" duration="5369000" />
       <workItem from="1719537073254" duration="2210000" />
-      <workItem from="1719792305376" duration="894000" />
+      <workItem from="1719792305376" duration="1548000" />
+      <workItem from="1720262333344" duration="1851000" />
     </task>
     <servers />
   </component>
@@ -104,6 +107,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="662" y="223" width="596" height="594" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1717302589057" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1720264304848">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1720264304848" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1717317137773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

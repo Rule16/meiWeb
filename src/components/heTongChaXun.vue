@@ -23,9 +23,9 @@
             </div>
             <el-table class="table-data" :data="tableData">
                 <el-table-column align="center" prop="number" label="合同编号" width="140"></el-table-column>
-                <el-table-column align="center" prop="seller" label="出卖人" width="200"></el-table-column>
+                <el-table-column align="center" prop="seller" label="出卖人" width="260"></el-table-column>
                 <el-table-column align="center" prop="buyer" label="买受人" width="200"></el-table-column>
-                <el-table-column align="center" prop="auditStatus" label="合同流程状态" width="220">
+                <el-table-column align="center" prop="auditStatus" label="合同流程状态" width="200">
                     <template #default="{row}">
                         <span v-if="row.auditStatus == 1">平台核验通过</span>
                         <div v-else class="flex justify-center" style="align-items: center">
@@ -41,10 +41,18 @@
                         <el-button v-if="row.auditRules == 3" class="secure-about" color="#6478D3" round plain>不规范</el-button>
                     </template>
                 </el-table-column>
+                <el-table-column align="center" prop="contractNum" label="合同数量"></el-table-column>
+                <el-table-column align="center" prop="transportType" label="运输方式"></el-table-column>
             </el-table>
-            <div class="flex justify-between" style="margin-top: 15px">
-                <div></div>
-                <div style="color: #999999">显示第 1 到第 0 条记录，总共 0 条记录 </div>
+            <div class="flex items-center" style="margin-top: 60px">
+                <div class="other-item">合同预览</div>
+                <div class="other-item">承诺书下载</div>
+                <div class="other-item">规范调整</div>
+                <div class="other-item">运输信息</div>
+                <div class="other-item">运力申请</div>
+                <div class="other-item">查看运力</div>
+                <div class="other-item">运力合同下载</div>
+                <div class="other-item">修改合同条款</div>
             </div>
         </div>
     </div>
@@ -55,56 +63,38 @@
             return {
                 keyword1: '合同编号',
                 keyword2: '出卖人',
-                keyword3: '买受人',
+                keyword3: '云南能投曲靖发电有限公司',
                 keyword4: '是否台账（全部）',
                 keyword5: '是否废弃（否）',
-                keyword6: '运输方式（全部）',
-                keyword7: '审核规范（全部）',
+                keyword6: '审核规范（全部）',
+                keyword7: '运输方式（全部）',
                 companyTabs: ['煤炭企业', '用煤企业'],
                 activeTab: 1,
                 tableData: [
                     {
-                        number: '2024CXYA01516',
-                        seller: '湖北亿佳新能源有限公司',
-                        buyer: '华电莱州发电有限公司',
+                        number: '2024CXY102332',
+                        seller: '贵州众一全彩影煤炭销售有限公司',
+                        buyer: '云南能投曲靖发电有限公司',
                         auditStatus: 1,
                         auditRules: 1,
+                        contractNum: '60.00',
+                        transportType: '铁路直达',
                     },{
-                        number: '2024CXYA01516',
-                        seller: '湖北亿佳新能源有限公司',
-                        buyer: '华电莱州发电有限公司',
-                        auditStatus: 1,
-                        auditRules: 1,
-                    },{
-                        number: '2024CXYA01516',
-                        seller: '湖北亿佳新能源有限公司',
-                        buyer: '华电莱州发电有限公司',
-                        auditStatus: 1,
-                        auditRules: 1,
-                    },{
-                        number: '2024CXYA01516',
-                        seller: '湖北亿佳新能源有限公司',
-                        buyer: '华电莱州发电有限公司',
+                        number: '2024CXYA00659',
+                        seller: '山煤国际能原集团股份有限公司',
+                        buyer: '云南能投曲靖发电有限公司',
                         auditStatus: 1,
                         auditRules: 2,
+                        contractNum: '30.00',
+                        transportType: '铁路直达',
                     },{
-                        number: '2024CXYA01516',
-                        seller: '湖北亿佳新能源有限公司',
-                        buyer: '华电莱州发电有限公司',
-                        auditStatus: 2,
+                        number: '2024CXYA00621',
+                        seller: '山西成功煤炭经销有限公司',
+                        buyer: '云南能投曲靖发电有限公司',
+                        auditStatus: 1,
                         auditRules: 2,
-                    },{
-                        number: '2024CXYA01516',
-                        seller: '湖北亿佳新能源有限公司',
-                        buyer: '华电莱州发电有限公司',
-                        auditStatus: 1,
-                        auditRules: 3,
-                    },{
-                        number: '2024CXYA01516',
-                        seller: '湖北亿佳新能源有限公司',
-                        buyer: '华电莱州发电有限公司',
-                        auditStatus: 1,
-                        auditRules: 1,
+                        contractNum: '5.0',
+                        transportType: '铁路直达',
                     },
                 ],
             }
@@ -128,4 +118,13 @@
     width: fit-content;
     margin: 50px 0 15px;
 }
+
+    .other-item {
+        color: #000997;
+        border: 1px solid #000997;
+        border-radius: 6px;
+        padding: 1px 5px;
+        margin: 0 5px;
+        font-size: 12px;
+    }
 </style>

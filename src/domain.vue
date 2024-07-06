@@ -6,10 +6,10 @@
                     <img src="./resource/img/logo.png"/>
                     <div class="flex">
                         <div class="company-info">
-                            <div class="company-name">四川华电珙县发电有限公司</div>
+                            <div class="company-name">云南能投曲靖发电有限公司</div>
                             <div class="member">
 <!--                                &emsp;中长期公员&emsp;<span class="expire-time">截至2024年12月31日</span>-->
-                                未缴费中长期会员
+                                &emsp;&emsp;未缴费中长期会员
                             </div>
                         </div>
                         <div class="log-out">退出</div>
@@ -78,7 +78,16 @@
                 ],
                 activeMenu: 2,
                 leftMenuList: [
-                    "服务指引", "供需企业信息公示", "关联公示签约信息", "已关联公示信息授权", "中长期合同录入", "中长期合同确认", "中长期合同查询", "中长期合同签订", "月度履约数据报送", "履约情况公示"
+                    "服务指引",
+                    "供需企业信息公示",
+                    "关联公示签约信息",
+                    "已关联公示信息授权",
+                    "中长期合同录入",
+                    "中长期合同确认",
+                    "中长期合同查询",
+                    "中长期合同签订",
+                    // "月度履约数据报送",
+                    // "履约情况公示"
                 ],
                 activeLeftMenu: 2,
             }
